@@ -112,4 +112,3 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # fstab
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery.wipe
