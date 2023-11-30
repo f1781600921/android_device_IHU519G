@@ -40,6 +40,19 @@
 /odmdtbo                  emmc     /dev/block/platform/bootdevice/by-name/odmdtbo       flags=display="odmdtbo";backup=1;flashimg=1
 /dtbo                     emmc     /dev/block/platform/bootdevice/by-name/dtbo          flags=display="dtbo";backup=1;flashimg=1
 /otp                      emmc     /dev/block/platform/bootdevice/by-name/otp           flags=display="otp";backup=1;flashimg=1
+/cluster                  emmc     /dev/block/platform/bootdevice/by-name/cluster       flags=display="cluster";backup=1;flashimg=1
+/flashinfo                emmc     /dev/block/platform/bootdevice/by-name/flashinfo     flags=display="flashinfo";backup=1;flashimg=1
+/hostos                   emmc     /dev/block/platform/bootdevice/by-name/hostos        flags=display="hostos";backup=1;flashimg=1
+/ivres                    emmc     /dev/block/platform/bootdevice/by-name/ivres         flags=display="ivres";backup=1;flashimg=1
+/metadata                 emmc     /dev/block/platform/bootdevice/by-name/metadata      flags=display="metadata";backup=1;flashimg=1
+/mtkdata                  emmc     /dev/block/platform/bootdevice/by-name/mtkdata       flags=display="mtkdata";backup=1;flashimg=1
+/odm2                     emmc     /dev/block/platform/bootdevice/by-name/odm2          flags=display="odm2";backup=1;flashimg=1
+/preloader_a              emmc     /dev/block/platform/bootdevice/by-name/preloader_a   flags=display="preloader_a";backup=1;flashimg=1
+/preloader_b              emmc     /dev/block/platform/bootdevice/by-name/preloader_b   flags=display="preloader_b";backup=1;flashimg=1
+/protect3                 emmc     /dev/block/platform/bootdevice/by-name/protect3      flags=display="protect3";backup=1;flashimg=1
+/protect4                 emmc     /dev/block/platform/bootdevice/by-name/protect4      flags=display="protect4";backup=1;flashimg=1
+/protect5                 emmc     /dev/block/platform/bootdevice/by-name/protect5      flags=display="protect5";backup=1;flashimg=1
+/sec1                     emmc     /dev/block/platform/bootdevice/by-name/sec1          flags=display="sec1";backup=1;flashimg=1
 
 # External devices
 /external_sd              auto     /dev/block/mmcblk1p1    /dev/block/mmcblk1           flags=display="MicroSD";storage;wipeingui;removable
