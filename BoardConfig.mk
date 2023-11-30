@@ -94,9 +94,11 @@ TW_DEVICE_VERSION := IHU519G by Ashuai
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_INPUT_BLACKLIST := "hbtp_vm"
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
+TW_CUSTOM_BATTERY_PATH := /sys/devices/platform/bat_gm30/power_supply/battery
+TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 155
+TW_DEFAULT_BRIGHTNESS := 128
 
 TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_NTFS_3G := true
