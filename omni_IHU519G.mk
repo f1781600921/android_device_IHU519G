@@ -5,7 +5,10 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit from those products. Most specific first.
+# Release name
+PRODUCT_RELEASE_NAME := IHU519G
+
+# 引用默认的编译配置文件，core_64_bit必须先于其他引用，否则不生效
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
