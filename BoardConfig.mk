@@ -65,7 +65,7 @@ endif
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 67108864
+BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_SYSTEMIMAGE_PARTITION_TYPE := ext4
@@ -167,25 +167,9 @@ SHRP_HAS_RECOVERY_PARTITION := true
 # IMPORTANT FLAGS # These are usually good to check - at least if the defaults are what you expect #
 ################### ################################################################################
 
-# Emergency DownLoad mode (0 = no EDL mode, 1 = EDL mode available)
-# Default (if not set): 0
-SHRP_EDL_MODE := 1
-
-# External SDcard path
-# Default (if not set): /
-SHRP_EXTERNAL := /external_sd
-
-# USB OTG path
-# Default (if not set): /
-SHRP_OTG := /usb_otg
-
 # Flashlight: (0 = disable, 1 = enable)
 # Default (if not set): 0
 SHRP_FLASH := 1
-
-# SHRP Dark mode, use this flag to have dark theme set by default
-# Default (if not set) is not using DARK mode
-SHRP_DARK := true
 
 # Do not include the SHRP theming system
 # Useful to save space for devices with a smaller recovery partition
