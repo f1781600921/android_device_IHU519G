@@ -35,7 +35,7 @@ add_lunch_combo omni_IHU519G-eng
 	export FOX_USE_NANO_EDITOR=1
 	export OF_ENABLE_LPTOOLS=1
 	export OF_USE_GREEN_LED=0
-	export OF_SCREEN_H=960
+	export OF_SCREEN_H=720
 	export OF_ALLOW_DISABLE_NAVBAR=0
 	export FOX_BUGGED_AOSP_ARB_WORKAROUND="1546300800"; # Tuesday, January 1, 2019 12:00:00 AM GMT+00:00
 	export OF_QUICK_BACKUP_LIST="/boot;/data;"
