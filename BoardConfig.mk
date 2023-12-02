@@ -129,3 +129,71 @@ TW_DEFAULT_LANGUAGE := zh_CN
 # Debugging
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD    := true
+
+################### ############################################
+# MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
+################### ############################################
+
+# Device codename
+# Default (if not set): N/A
+SHRP_DEVICE_CODE := IHU519G
+
+# Path of your SHRP device tree
+# Replace <device-brand> with the device brand name
+# (SHRP_DEVICE_CODE will expand to the above variable so check if that is correct)
+SHRP_PATH := device/ecarx/$(SHRP_DEVICE_CODE)
+
+# Maintainer name
+# Default (if not set): N/A
+SHRP_MAINTAINER := Ashuai
+
+# Recovery Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_REC_TYPE := Treble
+
+# Device Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_DEVICE_TYPE := A_Only
+
+# Your device's recovery path, dont use blindly
+# Default (if not set): N/A
+SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
+
+# Use this flag only if SHRP_REC is set
+# Default (if not set): N/A
+SHRP_HAS_RECOVERY_PARTITION := true
+
+################### ################################################################################
+# IMPORTANT FLAGS # These are usually good to check - at least if the defaults are what you expect #
+################### ################################################################################
+
+# Emergency DownLoad mode (0 = no EDL mode, 1 = EDL mode available)
+# Default (if not set): 0
+SHRP_EDL_MODE := 1
+
+# External SDcard path
+# Default (if not set): /
+SHRP_EXTERNAL := /external_sd
+
+# USB OTG path
+# Default (if not set): /
+SHRP_OTG := /usb_otg
+
+# Flashlight: (0 = disable, 1 = enable)
+# Default (if not set): 0
+SHRP_FLASH := 1
+
+# SHRP Dark mode, use this flag to have dark theme set by default
+# Default (if not set) is not using DARK mode
+SHRP_DARK := true
+
+# Do not include the SHRP theming system
+# Useful to save space for devices with a smaller recovery partition
+# Default (if not set) is full theming support
+SHRP_LITE := true
+
+SHRP_SKIP_DEFAULT_ADDON_1 := true
+SHRP_SKIP_DEFAULT_ADDON_2 := true
+SHRP_SKIP_DEFAULT_ADDON_3 := true
+SHRP_SKIP_DEFAULT_ADDON_4 := true
+INC_IN_REC_MAGISK := true
