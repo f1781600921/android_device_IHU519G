@@ -10,12 +10,11 @@ PRODUCT_RELEASE_NAME := IHU519G
 
 # 引用默认的编译配置文件，core_64_bit必须先于其他引用，否则不生效
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product-if-exists, $(SRC_TARGET_DIR)/product/embedded.mk)
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
@@ -25,8 +24,6 @@ $(call inherit-product, device/ecarx/IHU519G/device.mk)
 # Inherit some common PitchBlack stuff.
 $(call inherit-product, vendor/pb/config/common.mk)
 
-# Inherit some common omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_DEVICE := IHU519G
 PRODUCT_NAME := omni_IHU519G
