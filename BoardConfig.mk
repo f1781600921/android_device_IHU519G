@@ -130,6 +130,9 @@ TW_DEFAULT_LANGUAGE := "zh_CN"
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD    := true
 
+# PBRP specific flags
+PB_DISABLE_DEFAULT_DM_VERITY := true
+
 ################### ############################################
 # MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
 ################### ############################################
