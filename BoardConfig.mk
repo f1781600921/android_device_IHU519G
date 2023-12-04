@@ -132,6 +132,7 @@ TARGET_USES_LOGD    := true
 
 # PBRP specific flags
 PB_DISABLE_DEFAULT_DM_VERITY := true
+PB_DISABLE_DEFAULT_TREBLE_COMP := true
 
 ################### ############################################
 # MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
