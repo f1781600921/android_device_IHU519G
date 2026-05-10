@@ -122,7 +122,9 @@ TARGET_USES_MKE2FS := true
 TW_USE_TOOLBOX := true
 TW_NO_SCREEN_BLANK := true
 # TW_HAS_EDL_MODE := true
-TW_INCLUDE_FASTBOOTD := true
+# Android 9 devices with a dedicated recovery partition do not normally use fastbootd.
+# Enable this only if the source branch and partition layout explicitly require it.
+# TW_INCLUDE_FASTBOOTD := true
 # TW_INCLUDE_APEX := true
 TW_NEW_ION_HEAP := true
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -135,58 +137,18 @@ TW_DEFAULT_LANGUAGE := "zh_CN"
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD    := true
 
-# PBRP specific flags
-PB_DISABLE_DEFAULT_DM_VERITY := true
-PB_DISABLE_DEFAULT_TREBLE_COMP := true
+# OrangeFox configuration
+FOX_BUILD_DEVICE := IHU519G
+OF_MAINTAINER := Ashuai
 
-################### ############################################
-# MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
-################### ############################################
+# This is a non-Xiaomi A-only device with a dedicated recovery partition.
+# Keep OrangeFox's MIUI-specific patching paths disabled for the first bring-up.
+FOX_VANILLA_BUILD := true
+OF_DISABLE_MIUI_SPECIFIC_FEATURES := true
 
-# Device codename
-# Default (if not set): N/A
-SHRP_DEVICE_CODE := IHU519G
-
-# Path of your SHRP device tree
-# Replace <device-brand> with the device brand name
-# (SHRP_DEVICE_CODE will expand to the above variable so check if that is correct)
-SHRP_PATH := device/ecarx/$(SHRP_DEVICE_CODE)
-
-# Maintainer name
-# Default (if not set): N/A
-SHRP_MAINTAINER := Ashuai
-
-# Recovery Type (for "About" section only)
-# Default (if not set): N/A
-SHRP_REC_TYPE := Treble
-
-# Device Type (for "About" section only)
-# Default (if not set): N/A
-SHRP_DEVICE_TYPE := A_Only
-
-# Your device's recovery path, dont use blindly
-# Default (if not set): N/A
-SHRP_REC := /dev/block/platform/bootdevice/by-name/recovery
-
-# Use this flag only if SHRP_REC is set
-# Default (if not set): N/A
-SHRP_HAS_RECOVERY_PARTITION := true
-
-################### ################################################################################
-# IMPORTANT FLAGS # These are usually good to check - at least if the defaults are what you expect #
-################### ################################################################################
-
-# Flashlight: (0 = disable, 1 = enable)
-# Default (if not set): 0
-SHRP_FLASH := 1
-
-# Do not include the SHRP theming system
-# Useful to save space for devices with a smaller recovery partition
-# Default (if not set) is full theming support
-SHRP_LITE := true
-
-SHRP_SKIP_DEFAULT_ADDON_1 := true
-SHRP_SKIP_DEFAULT_ADDON_2 := true
-SHRP_SKIP_DEFAULT_ADDON_3 := true
-SHRP_SKIP_DEFAULT_ADDON_4 := true
-INC_IN_REC_MAGISK := true
+# Useful OrangeFox recovery tools. Keep the set small for a 32 MiB recovery partition.
+FOX_USE_BASH_SHELL := true
+FOX_ASH_IS_BASH := true
+FOX_USE_TAR_BINARY := true
+FOX_USE_SED_BINARY := true
+FOX_USE_XZ_UTILS := true
