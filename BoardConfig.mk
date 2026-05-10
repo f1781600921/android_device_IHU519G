@@ -40,6 +40,8 @@ TARGET_BOOTLOADER_BOARD_NAME := IHU519G
 TARGET_NO_BOOTLOADER := true
 
 # Display
+TARGET_SCREEN_WIDTH := 1280
+TARGET_SCREEN_HEIGHT := 720
 TARGET_SCREEN_DENSITY := 480
 
 # Kernel
@@ -100,7 +102,7 @@ PLATFORM_VERSION := 9.0
 TW_DEVICE_VERSION := IHU519G by Ashuai
 
 # TWRP Configuration
-TW_THEME := portrait_hdpi
+TW_THEME := landscape_hdpi
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
